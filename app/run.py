@@ -46,8 +46,8 @@ def index():
     
     # data for plot 2
     categories =  df[df.columns[4:]]
-    cate_counts = (categories.mean()*categories.shape[0]).sort_values(ascending=False)
-    cate_names = list(cate_counts.index)
+    category_counts = (categories.mean()*categories.shape[0]).sort_values(ascending=False)
+    category_names = list(category_counts.index)
     
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
@@ -75,8 +75,8 @@ def index():
         {
             'data': [
                 Bar(
-                    x=cate_names,
-                    y=cate_counts
+                    x=category_names,
+                    y=category_counts
                 )
             ],
 
